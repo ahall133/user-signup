@@ -6,19 +6,19 @@
         <form action="/user_signup" method ="post">
             
             Username 
-            <input type='text' name="username"/>
-            <p>{{error}}
+            <input type='text' name="username"/>{{name_error}}
+            <p>
 
             Password      
-            <input type='password'/>
+            <input type='password' name="password"/>{{pass_error}}
             <p>
 
             Verify Password
-            <input type='password'/>
+            <input type='password' name="ver_password"/>{{ver_pass_error}}
             <p>
 
             Email (Optional)
-            <input type='text'/>
+            <input type='text' name="email"/>{{email_error}}
             <p>
 
             <input type='submit'/>
