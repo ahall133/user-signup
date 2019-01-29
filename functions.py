@@ -31,23 +31,34 @@ def ver_pass_func(password, ver_password):
     return ver_pass_error
 
 def email_func(email):
-    email_error = ''
-    address = ''
+    email_non_error = ''
+    email_error = "Please enter a valid email"
+    chars_at = ''
+    char_dot = ''
+    
 
-    if len(email) < 3 or len(email) > 20:
-        email_error = "Please enter a valid email"
-        return email_error
+    if email == '':
+        return email_non_error
+
+    
 
     for let in email:
-        if let == '':
-            break
         if let == ' ':
-            email_error = "Please enter a valid email"
-            break
-        if let == "@" or let == ".":
-            address+=let
+            return email_error
 
-    if len(address) != 2:
-        email_error = "Please enter a valid email"
+        elif let == "@":
+            chars_at+=let
 
-    return email_error
+        elif let == ".":
+            char_dot+=let
+        
+
+    if len(chars_at) < 1 or len(char_dot) < 1:
+        return email_error
+    
+    if len(email) < 3 or len(email) > 20:
+        return email_error
+
+
+
+    return email_non_error

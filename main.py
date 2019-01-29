@@ -22,5 +22,6 @@ def errors():
     ver_pass_error = ver_pass_func(password, ver_password)
     email_error = email_func(email)
 
+
     return render_template('home.html', name_error=name_error, pass_error=pass_error, ver_pass_error = ver_pass_error, email_error = email_error)
 app.run()
