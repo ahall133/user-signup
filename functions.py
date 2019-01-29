@@ -40,8 +40,6 @@ def email_func(email):
     if email == '':
         return email_non_error
 
-    
-
     for let in email:
         if let == ' ':
             return email_error
@@ -52,13 +50,10 @@ def email_func(email):
         elif let == ".":
             char_dot+=let
         
-
     if len(chars_at) < 1 or len(char_dot) < 1:
         return email_error
     
     if len(email) < 3 or len(email) > 20:
         return email_error
-
-
 
     return email_non_error
