@@ -17,6 +17,7 @@ def errors():
     password = request.form['password']
     ver_password = request.form['ver_password']
     email = request.form['email']
+    
 
     name_error = username_func(username)
     pass_error = password_func(password)
@@ -32,6 +33,7 @@ def errors():
         return render_template('welcome.html', name=username)
 
     else:
-        return render_template('home.html', name_error=name_error, pass_error=pass_error, ver_pass_error = ver_pass_error, email_error = email_error)
+        return render_template('home.html', me=username, emailme=email, name_error=name_error, pass_error=pass_error, ver_pass_error = ver_pass_error, email_error = email_error)
+       
 app.run()
 

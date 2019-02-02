@@ -6,7 +6,7 @@
         <form action="/user_signup" method ="post">
             
             Username 
-            <input type='text' name="username"/>{{name_error}}
+            <input type='text' name="username" value="{{me}}"/>{{name_error}}
             <p>
 
             Password      
@@ -18,7 +18,7 @@
             <p>
 
             Email (Optional)
-            <input type='text' name="email"/>{{email_error}}
+            <input type='text' name="email" value="{{emailme}}"/>{{email_error}}
             <p>
 
             <input type='submit'/>
